@@ -16,5 +16,6 @@ One challenge was making sure the navbar and footer were consistent across all p
 **How it helped & What I learned:** The AI helped generate example structures using Bootstrap components such as form-control, tables, and grid layouts. I learned how Bootstrap organizes layouts using containers, rows, and columns, and how to properly structure forms and navigation components without using custom CSS.
 
 ## 5. Live Site Link
-*Provide the GitHub Pages link to the specific page(s) you built.*
-* **Live URL:** [Insert Link Here]
+* **Live URL:**
+**Cart Page:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/cart.html
+**Checkout Page:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/checkout.html
