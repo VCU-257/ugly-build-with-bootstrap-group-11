@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-light border-bottom">
+  <div class="container-fluid">
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto mb-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="catalog.html">CATALOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="wishlist.html">WISHLIST</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deals.html">DEALS</a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <div class="input-group">
+          <button class="btn btn-outline-secondary">
+            <i class="bi bi-search"></i>
+          </button>
+          <input type="text" class="form-control" placeholder="search">
+        </div>
+        <button class="btn btn-outline-secondary rounded-circle" aria-label="Cart">
+          <i class="bi bi-cart"></i>
+        </button>
+        <button class="btn btn-outline-secondary rounded-circle" aria-label="Close">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Content -->
+<div class="container mt-4 flex-grow-1">
+
+    <h3 class="mb-3">Your Cart</h3>
+
+    <table class="table bg-white">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img
+                            src="https://placehold.co/32x32?text=GPU"
+                            width="32"
+                            height="32"
+                            class="rounded me-2"
+                            alt="Graphics Card"
+                        >
+                        <span>Graphics Card</span>
+                    </div>
+                </td>
+                <td>$300</td>
+                <td>1</td>
+                <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img
+                            src="https://placehold.co/32x32?text=CPU"
+                            width="32"
+                            height="32"
+                            class="rounded me-2"
+                            alt="CPU"
+                        >
+                        <span>CPU</span>
+                    </div>
+                </td>
+                <td>$200</td>
+                <td>1</td>
+                <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-between align-items-center">
+        <h5>Total: $500</h5>
+        <a href="checkout.html" class="btn btn-success">Checkout</a>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-secondary text-white mt-auto">
+  <div class="container py-3">
+    <div class="d-flex gap-4">
+      <p class="mb-0">Customer Service</p>
+      <p class="mb-0">Privacy Policy</p>
+      <p class="mb-0">About US</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
