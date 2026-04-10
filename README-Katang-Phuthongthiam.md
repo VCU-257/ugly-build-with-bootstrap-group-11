@@ -17,5 +17,5 @@ One challenge was making sure the navbar and footer were consistent across all p
 
 ## 5. Live Site Link
 * **Live URL:**
-**Cart Page:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/cart.html
+**Cart Page:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/Cart.html
 **Checkout Page:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/checkout.html
