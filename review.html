@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog / Reviews</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <style>
+    body { overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+    #layout { display: flex; flex: 1; overflow: hidden; }
+    #sidebar { width: 180px; min-width: 180px; background: #ccc; overflow-y: auto; transition: width 0.2s, min-width 0.2s, padding 0.2s; }
+    #sidebar.collapsed { width: 0; min-width: 0; padding: 0 !important; overflow: hidden; }
+    #main { flex: 1; overflow-y: auto; }
+    .filter-bar { background: #aaa; height: 14px; border-radius: 4px; margin-bottom: 8px; }
+    .product-card { background: #ddd; border-radius: 12px; padding: 16px; }
+    .picture-placeholder { background: #bbb; border-radius: 8px; width: 160px; min-width: 160px; height: 130px; display: flex; align-items: center; justify-content: center; color: #666; }
+    .avatar { width: 44px; height: 44px; border-radius: 50%; background: #bbb; flex-shrink: 0; }
+    .review-box { background: #ddd; border-radius: 8px; padding: 12px; min-height: 100px; flex: 1; }
+    .stars { color: #bbb; font-size: 1.3rem; }
+    #bottom-bar { background: #bbb; padding: 10px 16px; display: flex; gap: 12px; }
+    #bottom-bar .btn { flex: 1; border-radius: 20px; background: #d9d9d9; border: none; color: #000; }
+  </style>
+</head>
+<body>
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar bg-body-tertiary border-bottom">
+    <div class="container-fluid">
+      <button class="btn btn-outline-secondary btn-sm me-2" onclick="document.getElementById('sidebar').classList.toggle('collapsed')">
+        <i class="bi bi-layout-sidebar"></i> Filters
+      </button>
+      <ul class="navbar-nav flex-row me-3 gap-2">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Catalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalog.html#deals">Deals</a></li>
+      </ul>
+      <form class="d-flex flex-grow-1 mx-3" role="search">
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input class="form-control" type="search" placeholder="Search">
+        </div>
+      </form>
+      <button class="btn btn-outline-secondary">
+        <i class="bi bi-cart"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="layout">
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="p-3">
+      <div class="fw-bold mb-2">Catalog/Reviews</div>
+      <div class="d-flex align-items-center mb-3">
+        <span class="me-1">&#9663;</span>
+        <span class="fw-semibold">Filters</span>
+      </div>
+      <div class="filter-bar"></div>
+      <div class="filter-bar"></div>
+      <div class="filter-bar"></div>
+      <div class="filter-bar"></div>
+      <div class="filter-bar"></div>
+      <div class="filter-bar"></div>
+      <div class="filter-bar"></div>
+      <div class="filter-bar"></div>
+    </div>
+
+    <!-- Main -->
+    <div id="main" class="p-3">
+
+      <!-- Product summary card -->
+      <div class="product-card d-flex gap-3 mb-4">
+        <div class="picture-placeholder">Picture</div>
+        <div class="d-flex flex-column justify-content-center">
+          <div class="fw-bold fs-5 mb-2">Name of the product</div>
+          <div class="fst-italic text-muted mb-2">Description</div>
+          <hr class="my-1">
+          <hr class="my-1">
+        </div>
+      </div>
+
+      <!-- Reviews section -->
+      <div class="fw-bold fs-5 mb-3">Reviews</div>
+
+      <div class="d-flex gap-3 mb-4">
+        <div class="avatar"></div>
+        <div class="flex-grow-1">
+          <div class="stars mb-1">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <div class="review-box">Customer reviews</div>
+        </div>
+      </div>
+
+      <div class="d-flex gap-3 mb-4">
+        <div class="avatar"></div>
+        <div class="flex-grow-1">
+          <div class="stars mb-1">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <div class="review-box">Customer reviews</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div id="bottom-bar">
+    <button class="btn">Buy Now</button>
+    <button class="btn">Add to Cart</button>
+    <button class="btn">Wishlist</button>
+    <button class="btn">Write Review</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
