@@ -23,16 +23,16 @@
           <a class="nav-link" href="wishlist.html">WISHLIST</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="deals.html">DEALS</a>
+          <a class="nav-link" href="catalog.html#deals">DEALS</a>
         </li>
       </ul>
       <div class="d-flex align-items-center gap-2">
-        <div class="input-group">
-          <button class="btn btn-outline-secondary">
+        <form class="input-group" action="catalog.html" method="get">
+          <button class="btn btn-outline-secondary" type="submit">
             <i class="bi bi-search"></i>
           </button>
-          <input type="text" class="form-control" placeholder="search">
-        </div>
+          <input type="text" name="q" class="form-control" placeholder="search">
+        </form>
         <button class="btn btn-outline-secondary rounded-circle" aria-label="Cart">
           <i class="bi bi-cart"></i>
         </button>
