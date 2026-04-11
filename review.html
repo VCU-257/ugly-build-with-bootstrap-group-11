@@ -6,72 +6,72 @@
   <title>Catalog / Reviews</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <style>
-    body { overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
-    #layout { display: flex; flex: 1; overflow: hidden; }
-    #sidebar { width: 180px; min-width: 180px; background: #ccc; overflow-y: auto; transition: width 0.2s, min-width 0.2s, padding 0.2s; }
-    #sidebar.collapsed { width: 0; min-width: 0; padding: 0 !important; overflow: hidden; }
-    #main { flex: 1; overflow-y: auto; }
-    .filter-bar { background: #aaa; height: 14px; border-radius: 4px; margin-bottom: 8px; }
-    .product-card { background: #ddd; border-radius: 12px; padding: 16px; }
-    .picture-placeholder { background: #bbb; border-radius: 8px; width: 160px; min-width: 160px; height: 130px; display: flex; align-items: center; justify-content: center; color: #666; }
-    .avatar { width: 44px; height: 44px; border-radius: 50%; background: #bbb; flex-shrink: 0; }
-    .review-box { background: #ddd; border-radius: 8px; padding: 12px; min-height: 100px; flex: 1; }
-    .stars { color: #bbb; font-size: 1.3rem; }
-    #bottom-bar { background: #bbb; padding: 10px 16px; display: flex; gap: 12px; }
-    #bottom-bar .btn { flex: 1; border-radius: 20px; background: #d9d9d9; border: none; color: #000; }
-  </style>
 </head>
-<body>
+<body class="vh-100 d-flex flex-column overflow-hidden">
 
-  <!-- Bootstrap Navbar -->
-  <nav class="navbar bg-body-tertiary border-bottom">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light border-bottom">
     <div class="container-fluid">
-      <button class="btn btn-outline-secondary btn-sm me-2" onclick="document.getElementById('sidebar').classList.toggle('collapsed')">
-        <i class="bi bi-layout-sidebar"></i> Filters
-      </button>
-      <ul class="navbar-nav flex-row me-3 gap-2">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Catalog</a></li>
-        <li class="nav-item"><a class="nav-link" href="catalog.html#deals">Deals</a></li>
-      </ul>
-      <form class="d-flex flex-grow-1 mx-3" role="search" action="catalog.html" method="get">
-        <div class="input-group">
-          <span class="input-group-text"><i class="bi bi-search"></i></span>
-          <input class="form-control" type="search" name="q" placeholder="Search">
+      <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto mb-0">
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="catalog.html">CATALOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wishlist.html">WISHLIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#deals">DEALS</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-secondary btn-sm" onclick="document.getElementById('sidebar').classList.toggle('d-none')">
+            <i class="bi bi-layout-sidebar"></i> Filters
+          </button>
+          <div class="input-group">
+            <button class="btn btn-outline-secondary">
+              <i class="bi bi-search"></i>
+            </button>
+            <input type="text" class="form-control" placeholder="search">
+          </div>
+          <a class="btn btn-outline-secondary rounded-circle" href="Cart.html" aria-label="Cart">
+            <i class="bi bi-cart"></i>
+          </a>
         </div>
-      </form>
-      <a class="btn btn-outline-secondary" href="Cart.html" aria-label="Cart">
-        <i class="bi bi-cart"></i>
-      </a>
+      </div>
     </div>
   </nav>
 
-  <div id="layout">
+  <div class="d-flex flex-grow-1 overflow-hidden">
 
     <!-- Sidebar -->
-    <div id="sidebar" class="p-3">
+    <div id="sidebar" class="p-3 bg-secondary-subtle overflow-y-auto" style="width: 180px; min-width: 180px;">
       <div class="fw-bold mb-2">Catalog/Reviews</div>
       <div class="d-flex align-items-center mb-3">
         <span class="me-1">&#9663;</span>
         <span class="fw-semibold">Filters</span>
       </div>
-      <div class="filter-bar"></div>
-      <div class="filter-bar"></div>
-      <div class="filter-bar"></div>
-      <div class="filter-bar"></div>
-      <div class="filter-bar"></div>
-      <div class="filter-bar"></div>
-      <div class="filter-bar"></div>
-      <div class="filter-bar"></div>
+      <div class="d-flex flex-column gap-2">
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+      </div>
     </div>
 
     <!-- Main -->
-    <div id="main" class="p-3">
+    <div class="p-3 flex-grow-1 overflow-y-auto">
 
       <!-- Product summary card -->
-      <div class="product-card d-flex gap-3 mb-4">
-        <div class="picture-placeholder">Picture</div>
+      <div class="d-flex gap-3 mb-4 p-3 bg-light rounded-3">
+        <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white flex-shrink-0" style="width: 160px; height: 130px;">Picture</div>
         <div class="d-flex flex-column justify-content-center">
           <div class="fw-bold fs-5 mb-2">Name of the product</div>
           <div class="fst-italic text-muted mb-2">Description</div>
@@ -84,22 +84,22 @@
       <div class="fw-bold fs-5 mb-3">Reviews</div>
 
       <div class="d-flex gap-3 mb-4">
-        <div class="avatar"></div>
+        <div class="bg-secondary rounded-circle flex-shrink-0" style="width: 44px; height: 44px;"></div>
         <div class="flex-grow-1">
-          <div class="stars mb-1">
+          <div class="text-secondary fs-5 mb-1">
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
           </div>
-          <div class="review-box">Customer reviews</div>
+          <div class="bg-light border rounded p-3" style="min-height: 100px;">Customer reviews</div>
         </div>
       </div>
 
       <div class="d-flex gap-3 mb-4">
-        <div class="avatar"></div>
+        <div class="bg-secondary rounded-circle flex-shrink-0" style="width: 44px; height: 44px;"></div>
         <div class="flex-grow-1">
-          <div class="stars mb-1">
+          <div class="text-secondary fs-5 mb-1">
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
           </div>
-          <div class="review-box">Customer reviews</div>
+          <div class="bg-light border rounded p-3" style="min-height: 100px;">Customer reviews</div>
         </div>
       </div>
 
@@ -107,11 +107,11 @@
   </div>
 
   <!-- Bottom bar -->
-  <div id="bottom-bar">
-    <button class="btn">Buy Now</button>
-    <button class="btn">Add to Cart</button>
-    <button class="btn">Wishlist</button>
-    <button class="btn">Write Review</button>
+  <div class="d-flex gap-3 p-3 bg-secondary-subtle border-top">
+    <button class="btn btn-outline-secondary flex-grow-1 rounded-pill">Buy Now</button>
+    <button class="btn btn-outline-secondary flex-grow-1 rounded-pill">Add to Cart</button>
+    <button class="btn btn-outline-secondary flex-grow-1 rounded-pill">Wishlist</button>
+    <button class="btn btn-outline-secondary flex-grow-1 rounded-pill">Write Review</button>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

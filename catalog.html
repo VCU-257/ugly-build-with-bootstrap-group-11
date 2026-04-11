@@ -6,76 +6,79 @@
   <title>Catalog</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <style>
-    body { overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
-    #layout { display: flex; flex: 1; overflow: hidden; }
-    #sidebar { width: 180px; min-width: 180px; background: #ccc; overflow-y: auto; transition: width 0.2s, min-width 0.2s, padding 0.2s; }
-    #sidebar.collapsed { width: 0; min-width: 0; padding: 0 !important; overflow: hidden; }
-    #main { flex: 1; overflow-y: auto; }
-    .filter-bar { background: #aaa; height: 14px; border-radius: 4px; }
-    .product-placeholder { background: #999; border-radius: 8px; height: 150px; cursor: pointer; }
-    .product-placeholder:hover { background: #888; }
-    .banner-placeholder { background: #ddd; border-radius: 8px; height: 120px; }
-  </style>
 </head>
-<body>
+<body class="vh-100 d-flex flex-column overflow-hidden">
 
-  <!-- Bootstrap Navbar -->
-  <nav class="navbar bg-body-tertiary border-bottom">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light border-bottom">
     <div class="container-fluid">
-      <button class="btn btn-outline-secondary btn-sm me-2" onclick="document.getElementById('sidebar').classList.toggle('collapsed')">
-        <i class="bi bi-layout-sidebar"></i> Filters
-      </button>
-      <ul class="navbar-nav flex-row me-3 gap-2">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Catalog</a></li>
-        <li class="nav-item"><a class="nav-link" href="#deals">Deals</a></li>
-      </ul>
-      <form class="d-flex flex-grow-1 mx-3" role="search" action="catalog.html" method="get">
-        <div class="input-group">
-          <span class="input-group-text"><i class="bi bi-search"></i></span>
-          <input class="form-control" type="search" name="q" placeholder="Search">
+      <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto mb-0">
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="catalog.html">CATALOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wishlist.html">WISHLIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#deals">DEALS</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-secondary btn-sm" onclick="document.getElementById('sidebar').classList.toggle('d-none')">
+            <i class="bi bi-layout-sidebar"></i> Filters
+          </button>
+          <div class="input-group">
+            <button class="btn btn-outline-secondary">
+              <i class="bi bi-search"></i>
+            </button>
+            <input type="text" class="form-control" placeholder="search">
+          </div>
+          <a class="btn btn-outline-secondary rounded-circle" href="Cart.html" aria-label="Cart">
+            <i class="bi bi-cart"></i>
+          </a>
         </div>
-      </form>
-      <a class="btn btn-outline-secondary" href="Cart.html" aria-label="Cart">
-        <i class="bi bi-cart"></i>
-      </a>
+      </div>
     </div>
   </nav>
 
-  <div id="layout">
+  <div class="d-flex flex-grow-1 overflow-hidden">
 
     <!-- Sidebar -->
-    <div id="sidebar" class="p-3">
+    <div id="sidebar" class="p-3 bg-secondary-subtle overflow-y-auto" style="width: 180px; min-width: 180px;">
       <div class="fw-bold mb-2">Catalog</div>
       <div class="d-flex align-items-center mb-3">
         <span class="me-1">&#9663;</span>
         <span class="fw-semibold">FILTERS</span>
       </div>
       <div class="d-flex flex-column gap-2">
-        <div class="filter-bar"></div>
-        <div class="filter-bar"></div>
-        <div class="filter-bar"></div>
-        <div class="filter-bar"></div>
-        <div class="filter-bar"></div>
-        <div class="filter-bar"></div>
-        <div class="filter-bar"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
+        <div class="bg-secondary rounded" style="height: 14px;"></div>
       </div>
     </div>
 
     <!-- Main content -->
-    <div id="main" class="p-3">
+    <div class="p-3 flex-grow-1 overflow-y-auto">
       <h5 id="deals" class="text-center text-decoration-underline mb-3">Our Deals</h5>
-      <div class="banner-placeholder mb-4"></div>
+      <div class="bg-light border rounded mb-4" style="height: 120px;"></div>
       <div class="row row-cols-3 g-3">
-        <div class="col"><a href="item.html" class="product-placeholder d-block text-decoration-none"></a></div>
-        <div class="col"><a href="item.html" class="product-placeholder d-block text-decoration-none"></a></div>
-        <div class="col"><a href="item.html" class="product-placeholder d-block text-decoration-none"></a></div>
-        <div class="col"><a href="item.html" class="product-placeholder d-block text-decoration-none"></a></div>
-        <div class="col"><a href="item.html" class="product-placeholder d-block text-decoration-none"></a></div>
-        <div class="col"><a href="item.html" class="product-placeholder d-block text-decoration-none"></a></div>
+        <div class="col"><a href="item.html" class="d-block bg-secondary rounded text-decoration-none" style="height: 150px;"></a></div>
+        <div class="col"><a href="item.html" class="d-block bg-secondary rounded text-decoration-none" style="height: 150px;"></a></div>
+        <div class="col"><a href="item.html" class="d-block bg-secondary rounded text-decoration-none" style="height: 150px;"></a></div>
+        <div class="col"><a href="item.html" class="d-block bg-secondary rounded text-decoration-none" style="height: 150px;"></a></div>
+        <div class="col"><a href="item.html" class="d-block bg-secondary rounded text-decoration-none" style="height: 150px;"></a></div>
+        <div class="col"><a href="item.html" class="d-block bg-secondary rounded text-decoration-none" style="height: 150px;"></a></div>
       </div>
     </div>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
