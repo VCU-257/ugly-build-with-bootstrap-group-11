@@ -4,50 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wishlist</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <style>
+        .wishlist-row {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
         .wishlist-row:hover {
-        background-color: #c8c8c8 !important;
+            background-color: #c8c8c8 !important;
+        }
+        /* Ensures the 'X' button stays visible and clickable over the link */
+        .z-index-top {
+            z-index: 3;
         }
     </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
-  <!-- Navbar from Teamate-->
     <nav class="navbar navbar-expand-lg bg-light border-bottom">
         <div class="container-fluid">
             <div class="navbar-collapse">
                 <ul class="navbar-nav me-auto mb-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catalog.html">CATALOG</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold active" href="wishlist.html">WISHLIST</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catalog.html#deals">DEALS</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">CATALOG</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold active" href="wishlist.html">WISHLIST</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html#deals">DEALS</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-2">
                     <div class="input-group">
-                        <a class="btn btn-outline-secondary" href="catalog.html">
-                            <i class="bi bi-search"></i>
-                        </a>
+                        <a class="btn btn-outline-secondary" href="catalog.html"><i class="bi bi-search"></i></a>
                         <input type="text" class="form-control" placeholder="search">
                     </div>
-                    <a class="btn btn-outline-secondary rounded-circle" href="Cart.html" aria-label="Cart">
-                        <i class="bi bi-cart"></i>
-                    </a>
-                    <button class="btn btn-outline-secondary rounded-circle">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
+                    <a class="btn btn-outline-secondary rounded-circle" href="Cart.html"><i class="bi bi-cart"></i></a>
+                    <button class="btn btn-outline-secondary rounded-circle"><i class="bi bi-x-lg"></i></button>
                 </div>  
             </div>
         </div>
@@ -55,91 +47,94 @@
 
     <main class="flex-grow-1 py-4 px-4">
 
-    <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
-        <a href="description.html" class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0" style="width:110px; height:80px; font-size:1rem;">
-            Picture<br>of Item
-        </a>
-        <div class="flex-grow-1 px-4">
-            <p class="mb-0">Description</p>
-        </div>
-        <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5">
-            <p class="mb-0 fw-bold">$x1</p>
-            <div class="d-flex flex-column gap-2">
-                <a class="btn btn-light border rounded-pill" href="checkout.html">
-                    Buy Now
-                </a>
-                <button class="btn btn-light border rounded-pill">
-                    Add to Cart
-                </button>
+        <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
+            
+            <a href="description.html" class="stretched-link"></a>
+
+            <div class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0" style="width:110px; height:80px; font-size:1rem;">
+                Picture<br>of Item
             </div>
-        </div>
-        <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2" style="width:28px;height:28px;padding:0;line-height:1;">&#x2715;
-        </button>
-    </div>
 
-    <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
-        <div class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0"style="width:110px; height:80px; font-size:1rem;">
-            <a href="description.html" class="stretched-link text-decoration-none text-dark">Picture <br> of Item</a>
-        </div>
-        <div class="flex-grow-1 px-4">
-            <p class="mb-0">Description</p>
-        </div>
-        <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5">
-            <p class="mb-0 fw-bold">$x2</p>
-            <div class="d-flex flex-column gap-2">
-                <a class="btn btn-light border rounded-pill" href="checkout.html">
-                    Buy Now
-                </a>
-                <button class="btn btn-light border rounded-pill">
-                    Add to Cart
-                </button>
+            <div class="flex-grow-1 px-4">
+                <p class="mb-0">Description of Item</p>
             </div>
-        </div>
-        <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2"style="width:28px;height:28px;padding:0;line-height:1;">
-        </button>
-    </div>
 
-    <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
-        <div class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0"style="width:110px; height:80px; font-size:1rem;">
-            <a href="description.html" class="stretched-link text-decoration-none text-dark">Picture <br> of Item</a>
-        </div>
-        <div class="flex-grow-1 px-4">
-            <p class="mb-0">Description</p>
-        </div>
-        <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5">
-          <p class="mb-0 fw-bold">$x1</p>
-          <div class="d-flex flex-column gap-2">
-            <a class="btn btn-light border rounded-pill" href="checkout.html">Buy Now</a>
-            <button class="btn btn-light border rounded-pill">Add to Cart</button>
-          </div>
-        </div>
-        <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2"style="width:28px;height:28px;padding:0;line-height:1;">
-
-        </button>
-    </div>
-
-    <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
-        <div class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0"style="width:110px; height:80px; font-size:1rem;">
-            <a href="description.html" class="stretched-link text-decoration-none text-dark">Picture <br> of Item</a>
-        </div>
-        <div class="flex-grow-1 px-4">
-            <p class="mb-0">Description</p>
-        </div>
-        <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5">
-            <p class="mb-0 fw-bold">$x4</p>
-            <div class="d-flex flex-column gap-2">
-                <a class="btn btn-light border rounded-pill" href="checkout.html">
-                    Buy Now
-                </a>
-                <button class="btn btn-light border rounded-pill">
-                    Add to Cart
-                </button>
+            <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5 position-relative z-index-top">
+                <p class="mb-0 fw-bold">$x1</p>
+                <div class="d-flex flex-column gap-2">
+                    <a class="btn btn-light border rounded-pill" href="checkout.html">
+                        Buy Now
+                    </a>
+                    <button class="btn btn-light border rounded-pill">
+                        Add to Cart
+                    </button>
+                </div>
             </div>
-        </div>
-        <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2"style="width:28px;height:28px;padding:0;line-height:1;">
 
-        </button>
-    </div>
+            <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2 z-index-top" style="width:28px;height:28px;padding:0;line-height:1;">
+                &#x2715;
+            </button>
+        </div>
+
+        <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
+            <a href="description.html" class="stretched-link"></a>
+            <div class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0" style="width:110px; height:80px;">
+                Picture<br>of Item
+            </div>
+            <div class="flex-grow-1 px-4"><p class="mb-0">Description</p></div>
+            <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5 position-relative z-index-top">
+                <p class="mb-0 fw-bold">$x2</p>
+                <div class="d-flex flex-column gap-2">
+                    <a class="btn btn-light border rounded-pill" href="checkout.html">
+                        Buy Now
+                    </a>
+                    <button class="btn btn-light border rounded-pill">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2 z-index-top" style="width:28px;height:28px;padding:0;line-height:1;">&#x2715;</button>
+        </div>
+        <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
+            <a href="description.html" class="stretched-link"></a>
+            <div class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0" style="width:110px; height:80px;">
+                Picture<br>of Item
+            </div>
+            <div class="flex-grow-1 px-4"><p class="mb-0">Description</p></div>
+            <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5 position-relative z-index-top">
+                <p class="mb-0 fw-bold">$x3</p>
+                <div class="d-flex flex-column gap-2">
+                    <a class="btn btn-light border rounded-pill" href="checkout.html">
+                        Buy Now
+                    </a>
+                    <button class="btn btn-light border rounded-pill">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2 z-index-top" style="width:28px;height:28px;padding:0;line-height:1;">&#x2715;</button>
+        </div>
+        <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
+            <a href="description.html" class="stretched-link"></a>
+            <div class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0" style="width:110px; height:80px;">
+                Picture<br>of Item
+            </div>
+            <div class="flex-grow-1 px-4"><p class="mb-0">Description</p></div>
+            <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5 position-relative z-index-top">
+                <p class="mb-0 fw-bold">$x4</p>
+                <div class="d-flex flex-column gap-2">
+                    <a class="btn btn-light border rounded-pill" href="checkout.html">
+                        Buy Now
+                    </a>
+                    <button class="btn btn-light border rounded-pill">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2 z-index-top" style="width:28px;height:28px;padding:0;line-height:1;">&#x2715;</button>
+        </div>
+        
+
     </main>
 
     <footer class="bg-secondary bg-opacity-25 border-top py-2 px-4">
