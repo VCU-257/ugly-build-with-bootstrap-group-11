@@ -28,5 +28,5 @@ Yes I did use AI to assist in my page development.
 ## 5. Live Site Link
 *Provide the GitHub Pages link to the specific page(s) you built.*
 * **Live URL:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/
-* **Catalog Page:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/catalog.html
+* **Catalog Page:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/review.html
 * **Review Page:** https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/catalog.html
