@@ -17,5 +17,5 @@
 
 ## 5. Live Site Link
 * **Live URL:** [https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/]
-* **Compare.html** [https://github.com/VCU-257/ugly-build-with-bootstrap-group-11/compare.html]
+* **Compare.html** [https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/compare.html]
 * **Index.html** [https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/index.html]
