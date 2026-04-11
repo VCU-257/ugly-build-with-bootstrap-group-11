@@ -57,7 +57,7 @@
 
     <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
     <!-- This link covers the whole row -->
-    <a href="description.html" class="stretched-link"></a>
+    <a href="description.html" class="stretched-link" style="z-index:1;"></a>
 
     <!-- Image box -->
     <div class="bg-light border rounded d-flex justify-content-center align-items-center text-center flex-shrink-0"
@@ -70,16 +70,16 @@
     </div>
 
     <!-- Buttons need position-relative to sit above the stretched-link -->
-    <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5 position-relative">
-        <p class="mb-0 fw-bold">$x1</p>
-        <div class="d-flex flex-column gap-2">
-            <a class="btn btn-light border rounded-pill position-relative" href="checkout.html">Buy Now</a>
-            <button class="btn btn-light border rounded-pill position-relative">Add to Cart</button>
-        </div>
+    <div class="d-flex align-items-center gap-3 flex-shrink-0 pe-5 position-relative" style="z-index:2;">
+    <p class="mb-0 fw-bold">$x1</p>
+    <div class="d-flex flex-column gap-2">
+        <a class="btn btn-light border rounded-pill" href="checkout.html">Buy Now</a>
+        <button class="btn btn-light border rounded-pill">Add to Cart</button>
     </div>
+</div>
 
-    <button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2 position-relative"
-            style="width:28px;height:28px;padding:0;line-height:1;">&#x2715;</button>
+<button class="btn btn-sm btn-outline-secondary rounded-circle position-absolute top-0 end-0 m-2"
+        style="width:28px;height:28px;padding:0;line-height:1;z-index:2;">&#x2715;</button>
 </div>
 
     <div class="wishlist-row d-flex align-items-center bg-secondary bg-opacity-25 rounded-3 p-3 mb-3 position-relative">
