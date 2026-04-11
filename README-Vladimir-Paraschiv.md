@@ -16,6 +16,6 @@
 * **How it helped and what I learned:** *It sped up the process of finding the templates for components so that I could more easily find the template pages from bootstrap. I requested a link to the page with each question as well. This allowed me to read more about the component and its individual parts.*
 
 ## 5. Live Site Link
-* **Live URL:** [https://github.com/VCU-257/ugly-build-with-bootstrap-group-11]
+* **Live URL:** [https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/]
 * **Compare.html** [https://github.com/VCU-257/ugly-build-with-bootstrap-group-11/compare.html]
 * **Index.html** [https://vcu-257.github.io/ugly-build-with-bootstrap-group-11/index.html]
